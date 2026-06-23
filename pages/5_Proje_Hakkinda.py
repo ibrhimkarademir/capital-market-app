@@ -177,12 +177,12 @@ for index, (folder_name, description) in enumerate(ARCHITECTURE_ITEMS):
             st.markdown(f"**{folder_name}**")
             st.caption(description)
 
-st.header("Mevcut Geliştirme Durumu")
-status_columns = st.columns(2)
-with status_columns[0]:
-    render_list_card("Tamamlanan", COMPLETED_ITEMS, "✅")
-with status_columns[1]:
-    render_list_card("Bekleyen", PENDING_ITEMS, "⏳")
+#st.header("Mevcut Geliştirme Durumu")
+#status_columns = st.columns(2)
+#with status_columns[0]:
+#    render_list_card("Tamamlanan", COMPLETED_ITEMS, "✅")
+#with status_columns[1]:
+#    render_list_card("Bekleyen", PENDING_ITEMS, "⏳")
 
 st.warning(
     "Bu uygulama bir lisans bitirme projesi kapsamında geliştirilmiştir. "
