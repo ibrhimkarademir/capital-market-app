@@ -1,0 +1,123 @@
+{
+  "project": {
+    "symbol": "AAPL",
+    "input_window": 30,
+    "forecast_horizon": 5,
+    "target_type": "Log-getiri ve fiyat dönüşümü"
+  },
+  "models": {
+    "LSTM": {
+      "display_name": "LSTM",
+      "status": "Tez sonucu entegre edildi",
+      "metrics": {
+        "mae": 4.900540284122918,
+        "rmse": 7.491222081396582,
+        "r2": 0.9265346496851188,
+        "direction_accuracy": 53.48837209302325
+      },
+      "test_metrics": {
+        "mse": 56.11840827280375,
+        "rmse": 7.491222081396582,
+        "mae": 4.900540284122918,
+        "mape": 2.2378155678581875,
+        "r2": 0.9265346496851188,
+        "direction_accuracy": 53.48837209302325
+      },
+      "validation_metrics": {
+        "mse": 26.448565923061228,
+        "rmse": 5.142816924902268,
+        "mae": 3.8550060979981007,
+        "mape": 1.775448568015137,
+        "r2": 0.9493652161440421,
+        "direction_accuracy": 60.46511627906976
+      },
+      "hyperparameters": {
+        "units": 192,
+        "dropout": 0.2,
+        "batch_size": 32,
+        "epochs": 150,
+        "patience": 15,
+        "learning_rate": 0.001
+      },
+      "prediction_file": "lstm_5day_rolling_test_predictions.csv",
+      "future_forecast_file": "lstm_5day_future_forecast.csv",
+      "result_type": "Sabit tez çıktısı",
+      "generated_period": "2025 Aralık",
+      "notes": "Doğru deney dönemine ait 5 günlük Direct Multi-Output LSTM tez çıktıları entegre edilmiştir."
+    },
+    "TFT": {
+      "display_name": "TFT Tabanlı Model",
+      "status": "Tez sonucu entegre edildi",
+      "metrics": {
+        "mae": 4.741213185297877,
+        "rmse": 7.366073170642243,
+        "r2": 0.9289687811904377,
+        "direction_accuracy": 55.348837209302324
+      },
+      "test_metrics": {
+        "mse": 54.25903395525547,
+        "rmse": 7.366073170642243,
+        "mae": 4.741213185297877,
+        "mape": 2.16823587956478,
+        "r2": 0.9289687811904377,
+        "direction_accuracy": 55.348837209302324
+      },
+      "validation_metrics": {
+        "mse": 26.991735482810874,
+        "rmse": 5.195357108304575,
+        "mae": 3.8810896187938977,
+        "mape": 1.786720873896023,
+        "r2": 0.9483253384684409,
+        "direction_accuracy": 59.53488372093023
+      },
+      "hyperparameters": {
+        "hidden_size": 96,
+        "dropout": 0.05,
+        "batch_size": 32,
+        "epochs": 150,
+        "patience": 15,
+        "learning_rate": 0.001,
+        "num_heads": 4
+      },
+      "prediction_file": "tft_5day_rolling_test_predictions.csv",
+      "future_forecast_file": "tft_5day_future_forecast.csv",
+      "result_type": "Sabit tez çıktısı",
+      "generated_period": "2025 Aralık",
+      "notes": "Çalışmada sadeleştirilmiş değişken seçimi, zamansal kodlayıcı, dikkat mekanizması ve gated residual yapı içeren TFT tabanlı mimari kullanılmıştır."
+    },
+    "Chronos": {
+      "display_name": "Chronos",
+      "status": "Tez sonucu entegre edildi",
+      "metrics": {
+        "mae": 5.655997653537327,
+        "rmse": 9.084984995842428,
+        "r2": 0.8895703414929137,
+        "direction_accuracy": 40.88888888888889
+      },
+      "test_metrics": {
+        "mse": 82.53695237468203,
+        "rmse": 9.084984995842428,
+        "mae": 5.655997653537327,
+        "mape": 2.5629080187948334,
+        "r2": 0.8895703414929137,
+        "direction_accuracy": 40.88888888888889
+      },
+      "prediction_file": "chronos_5day_rolling_test_predictions.csv",
+      "future_forecast_file": "chronos_5day_future_forecast.csv",
+      "result_type": "Sabit tez çıktısı",
+      "generated_period": "2025 Aralık",
+      "inference_type": "Zero-shot",
+      "model_id": "amazon/chronos-t5-small",
+      "context_length": 256,
+      "model_settings": {
+        "forecast_horizon": 5,
+        "rolling_step": 5,
+        "central_forecast": "0.50 quantile / medyan",
+        "lower_quantile": 0.1,
+        "upper_quantile": 0.9,
+        "training_performed": false
+      },
+      "notes": "Chronos sonuçları amazon/chronos-t5-small modeliyle zero-shot çıkarım kullanılarak oluşturulmuştur. Merkez tahmin medyan değer, belirsizlik aralığı ise 0.10 ve 0.90 quantile değerleriyle gösterilmektedir."
+    }
+  }
+}

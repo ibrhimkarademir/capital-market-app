@@ -1,0 +1,2 @@
+hidden_size,dropout,batch_size,epochs,patience,learning_rate,num_heads
+96,0.05,32,150,15,0.001,4

@@ -1,0 +1,2 @@
+units,dropout,batch_size,epochs,patience,learning_rate
+192,0.2,32,150,15,0.001

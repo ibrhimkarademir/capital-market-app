@@ -1,0 +1,25 @@
+# Proje Planı
+
+- [x] 1. Temel Streamlit iskeleti
+- [x] 2. Veri yükleme ve doğrulama sistemi
+- [x] 3. AAPL veri analizi sayfası
+- [x] 4. Ana dashboard
+- [x] 5. Tez sonuçlarının sisteme aktarılması
+  - Model sonuçları için veri altyapısı hazırlandı.
+  - LSTM, TFT Tabanlı Model ve Chronos sonuçları aktarıldı.
+  - Model test dönemlerindeki özgün farklılıklar korunarak açıklandı.
+- [x] 6. LSTM entegrasyonu
+- [x] 7. TFT entegrasyonu
+- [x] 8. Chronos entegrasyonu
+  - Chronos zero-shot tahmin aralığı eklendi.
+- [x] 9. Model karşılaştırma sayfası
+- [x] 10. Beş günlük tahmin sayfası
+  - LSTM, TFT Tabanlı Model ve Chronos sabit çıktıları bağlandı.
+- [x] 11. Metodoloji ve proje hakkında sayfaları
+- [x] 12. Sunum modu, testler ve deployment
+  - Sunum modu eklendi.
+  - Üç modelin bütünlük testleri tamamlandı.
+  - Production requirements hazırlandı.
+  - Deployment kontrol listesi oluşturuldu.
+  - Uygulama yerel olarak doğrulandı.
+  - Gerçek platforma deployment kullanıcı onayından sonra yapılacaktır.

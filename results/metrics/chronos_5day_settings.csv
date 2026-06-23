@@ -1,0 +1,2 @@
+model_id,inference_type,context_length,forecast_horizon,rolling_step,central_forecast,lower_quantile,upper_quantile,training_performed
+amazon/chronos-t5-small,Zero-shot,256,5,5,0.50 quantile / medyan,0.10,0.90,false
